@@ -1,0 +1,45 @@
+/* # 아이디 선택자 : 고유한 html 요소에 적용합니다. 문서내에서 id를 가진 요소는 하나 이므로 하나에만 적용 */
+#product-overview {
+    background-color: red;
+}
+
+/* . 클래스 선택자 : html 요소에 적용, 재사용 가능: 동일한 클래슴여을 공유할 수 있다. */
+
+.section-title {
+    color: green;
+    font-family: inherit;
+}
+
+/* 결합자 id = product-overview 아래에 있는 h1 태그에 대한 css */
+#product-overview h1 {
+    color: white;
+    font-family: 'Anton', sans-serif;
+}
+
+/* h1 {
+    font-family: sans-serif;
+} */
+
+
+/* 우선순위 : 클래스 선택자 . 10  , 아이디 선택자 #  100 , 동일한 속성에 대해서 두게 다 설정된다면, id의 스타일이 적용된다.*/
+/* 아이디 선택자는 자주 쓰지 않는 것이 좋다. */
+/* 자세한 명시도일수록 우선순위가 올라간다. */
+
+/* 인접형제결합자 */
+/* div + p {} */
+
+/* 일반 형제 결합자 */
+/* div ~ p {} */
+
+/* 자손 선택자 : 직속 자식일 경우에만 적용 */
+/* div > p {} */
+
+/* 결합자 */
+/* div p {} */
+
+/* 직접 선택자를 사용할수록 성능이 올라간다 */
+
+/* selectors , properties , values */
+/* selectors : div .... */
+/* properties : background-color with color */
+/* values : red , 30% , 10px .. */

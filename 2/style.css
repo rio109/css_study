@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /* web default 8px */
+    margin: 0;
+}
+
+#product-overview {
+    background-color: red;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    margin: 100px;
+    border: 10px solid black;
+    /* content-box ( default : 기본값 , 요소의 가로 새로의 콘텐츠 영역만을 기준으로 계산
+    padding , border는 계산하지 않고 증가한다.
+    실제 요소의 크기 = width + padding + border
+
+    border-box ( 패딩, 테두리를 포함한 전체 크기를 계산한다. ) 즉 width와 height 안에 조정된다.
+    요소 크기 = width + (padding - border)    
+
+    box-sizing: border-box는 실무에서 더 자주 사용됩니다. 이유는:
+    사이즈 계산 단순화: 요소의 전체 크기가 명확히 정의되므로, 레이아웃을 설계하거나 요소를 배치할 때 더 직관적입니다.
+    예측 가능성: 패딩과 테두리가 포함되므로, 요소 크기 계산이 혼란스러워지지 않습니다.
+
+    */
+}
+
+.section-title {
+    color: green;
+    font-family: inherit;
+}
+
+#product-overview h1 {
+    color: white;
+    font-family: 'Anton', sans-serif;
+}
+
+/* 박스 모델 
+
+html 요소는 네가지 주요 부분으로 구성된다.
+content : 요소의 실제 내용 
+padding : content와 border 사이의 내부 여백 (내부 여백) : 요소 내부의 여백 조절, content와 border의 사이 공간 확보
+border : 요소를 감싸는 테두리 (테두리) : 시각적인 테두리를 추가하여 요소를 강조 : 특징이 테두리 두께 색상 스타일 설정 가능
+margin: border의 바깥쪽 공간, 요소간의 외부 여백 ( 외부 여백 ) : 핵심은 요소간의 간격 설정, 다른 요소와의 거리 조절
+
+
+속성	역할	위치	배경색/스타일 반영
+margin	요소 외부 공간	Border 외부	배경색/스타일     없음
+padding	요소 내부 공간	Content와 Border 사이	   배경색 반영
+border	요소의 테두리	Padding 바깥, Margin 안쪽	스타일 반영 가능
+
+외부    테두리   내부    콘텐츠
+maring border padding content
+
+| Margin (외부 여백) |
+  --------------------
+  | Border (테두리)  |
+    ----------------
+    | Padding       |
+      ------------
+      | Content    |
+      ------------
+
+
+총 너비 = Content Width + Padding Left + Padding Right + Border Left + Border Right + Margin Left + Margin Right
+총 높이 = Content Height + Padding Top + Padding Bottom + Border Top + Border Bottom + Margin Top + Margin Bottom
+
+
+div {
+    width: 100px;
+    height: 50px;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 15px;
+}
+
+총 너비 = 100 + 10 + 10 + 5 + 5 + 15 + 15 = 160px
+총 높이 = 50 + 10 + 10 + 5 + 5 + 15 + 15 = 110px
+
+
+*/
+
+/* 바깥쪽 여백(Margin)을 설정할 때 예기치 못한 결과가 발생할 수 있습니다.
+
+각 요소에 바깥쪽 여백을 설정했는데 인접한 두 요소가 바깥쪽 여백 하나를 공유하는 이유가 무엇인가요?
+
+강의 영상에서처럼 <section> 과 같은 부모 요소가 갑자기 <h1>과 같은 자식 요소의 바깥쪽 여백을 차지하는 이유는 무엇인가요?
+
+이는 여백 상쇄(margin collapsing) 현상과 관련 있습니다. 다음의 글에서 자세히 알아볼 수 있습니다: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
+
+기본적인 사례가 세 가지는 다음과 같습니다.
+
+둘 다 바깥쪽 여백을 가진 인접 형제 요소
+
+첫째 및/또는 마지막 (혹은 유일한)의 자식 요소에 바깥쪽 여백이 설정된 하나 또는 둘 이상의 자식 요소를 가진 부모 요소
+
+콘텐츠, 안쪽 여백, 테두리와 높이가 지정되지 않은 요소
+
+사례를 함께 살펴봅시다.
+
+1. 인접 형제
+
+첫 번째 요소의 바깥쪽 여백이 10px (좌우상하 모두), 두 번째 요소의 바깥쪽 여백이 5px (또는 20px - 값은 상관없음)일 경우입니다.
+
+CSS는 여백을 상쇄하고 두 요소 중 큰 값의 바깥쪽 여백을 추가합니다. 바깥쪽 여백이 
+각각 10px, 5px라면 두 요소 사이에 바깥쪽 여백 10px이 추가될까요?
+
+2. 바깥쪽 여백이 설정된 자식 요소를 가진 부모 요소
+
+첫 번째 및/또는 마지막 혹은 유일한 자식 요소에 바깥쪽 여백 (상단 및/또는 하단)이 설정된 경우입니다. 
+이 경우 부모 요소의 바깥쪽 여백은 자식 요소(들)의 바깥쪽 여백과 함께 상쇄됩니다. 마찬가지로 크기가 큰 바깥쪽 여백이 이기고 부모 요소에 적용됩니다.
+
+부모 요소에 안쪽 여백, 인라인 콘텐츠 (자식 요소는 제외) 또는 테두리가 설정된 경우에는 
+이 동작이 발생하지 않고 자식 요소의 바깥쪽 여백이 콘텐츠를 감싸는 부모 요소에 추가됩니다.
+
+3. 바깥쪽 여백이 설정된 빈 요소
+
+이러한 경우는 자주 발생하지 않지만, 콘텐츠, 안쪽 여백, 테두리, 높이가 설정되지 않은 요소의 경우, 
+상단과 하단의 바깥쪽 여백은 하나의 단일한 바깥쪽 여백으로 병합됩니다. 다시 말해 큰 값이 이깁니다. */
