@@ -1,0 +1,41 @@
+body {
+    font-family: sans-serif;
+}
+
+nav {
+    margin-bottom: 16px;
+    background-color: orange;
+    padding: 8px 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+}
+
+a.active {
+    color: red;
+}
+
+/* 
+    not 사용보다 그냥 후순위로 작업하는 것도 좋은방법 아래의 a 태그 css처럼
+a:not(.active) { 
+    color: blue;
+} */
+
+a {
+    color: blue;
+}
+
+
+.main-section {
+    height: 800px;
+    border: 1px solid #ccc;
+    padding: 16px;
+}
+
+/* 클래스 안에서 중복으로 선언되는것은 의미가 없고, css순서가 중요하다 */
+.hightlighted {
+    border: 2px solid orange;
+}
