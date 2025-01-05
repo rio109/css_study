@@ -1,0 +1,126 @@
+.main-header {
+    width: 100%;
+    background-color: #2ddf5c;
+    padding: 8px 16px;
+}
+
+.main-header__brand {
+    color: #0e4f1f;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 22px;
+}
+
+
+.main-header>div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.main-nav {
+    display: inline-block;
+    text-align: right;
+    width: calc(100% - 74px);
+    vertical-align: middle;
+}
+
+.main-nav__items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-nav__item {
+    display: inline-block;
+    margin-left: 16px;
+}
+
+.main-nav__item a {
+    text-decoration: none;
+    color: green;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+
+/* .main-nav__item a::after {
+    content: " (Link)";
+    color: red;
+} */
+
+.main-nav__item a:hover,
+.main-nav__item a:active {
+    color: white;
+    border-bottom: 5px solid white;
+}
+
+.main_nav__item--cta a {
+    color: white;
+    background-color: red;
+    /* padding: 8px, 8px, 16px, 16px; */
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 8px;
+}
+
+.main_nav__item--cta a:hover,
+.main_nav__item--cta a:active {
+    color: red;
+    background-color: white;
+    border: none;
+}
+
+.main-footer {
+    background-color: black;
+    /* color: white; */
+    padding: 32px;
+    margin-top: 48px;
+}
+
+.main-footer__links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.main-footer__link {
+    display: inline-block;
+    margin: 0 16px;
+}
+
+.main-footer__link a {
+    color: white;
+    text-decoration: none;
+}
+
+.main-footer__link a:hover,
+.main-footer__link a:active {
+    color: #ccc;
+
+}
+
+
+.button {
+    background-color: rgb(255, 165, 31);
+    color: white;
+    font: inherit;
+    border: 1.4px solid rgb(0, 0, 0);
+    padding: 8px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.button:hover,
+.button:active {
+    background-color: white;
+    color: rgb(255, 165, 31);
+}
+
+/* 포커스는 잘 모르겠네, */
+.button:focus {
+    outline: none;
+}
