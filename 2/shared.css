@@ -1,12 +1,17 @@
 .main-header {
     width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
     background-color: #2ddf5c;
     padding: 8px 16px;
+    z-index: 1;
 }
 
 .main-header__brand {
     color: #0e4f1f;
     text-decoration: none;
+
     font-weight: bolder;
     font-size: 22px;
 }

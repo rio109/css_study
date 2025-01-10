@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+html {
+    margin: 30px;
+}
+
 body {
     /* web default 8px */
     margin: 0;
