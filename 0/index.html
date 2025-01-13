@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!-- Html5 표준을 따른다는 것을 선언해서 브라우저가 문서를 제대로 해석할 수 있게 함 -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 반응형 디자인을 위해 화면 너비와 스케일을 설정한다. -->
+    <!-- 메타 테크는 메타데이터를 정의하는 테그로, 브우저나 검색 엔진 등에 문서의 추가 정보 제공
+    viewport는 사용자의 화면의 가시 영역을 정의한다.
+    이는 주로 모바일 디바이스에서의 웹페이지 표시 방식을 설정한데 사용된다.
+    content="" 콘텐트 속성 안에 뷰포트 설정값을 나열한다.
+    
+    width=device-width 뷰포트의 너비를 디바이스의 화면 너비에 맞춘다.
+    예로 스마트폰에서 화면의 실제 픽셀 너비에 맞게 웹페이지를 표시하도록 하낟.
+    이 설정이 없으면, 웹 페이지가 브라우저의 기본 너비 (일반적으로 980px이상)로 표시되어 , 확대 또는 축소가 필요할 수 있다.
+    initial-scale=1.0 : 페이지의 초기 확대/축소 비율을 설정한다.
+    1.0은 디바이스의 기본 배율 (100%)로 표시되도록 설정한다. : 사용자가 화면을 축소하지 않은 상태에서 페이지가 자연스럽게 보이게 한다.
+
+    결론 : 이 태그가 있으면, 모바일 환경에서 페이지가 화면 크기에 맞게 축소 또는 확대 없이 표시가 된다.
+    없으면, 웹페이지는 데스크톱 브라우저 기준의 고정 너비로 표시된다.
+
+    반응형 웹 디자인에서는 필수적으로 사용된다.
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 검색 엔진 결과 페이지(SERP)에 표시되는 설정
+    검색 엔진(예: Google, Bing)은 <meta description> 태그의 내용을 검색 결과에 표시합니다.
+    사용자가 검색 결과에서 클릭할지 말지 결정하는 데 중요한 역할을 합니다.
+    -->
+    <meta name="description" content="최고의 HTML 태그 설명 및 SEO 튜토리얼. 웹 개발 초보자부터 전문가까지 모두를 위한 정보 제공.">
+    <!-- 검색 엔진 결과 : 최고의 HTML 태그 설명 및 SEO 튜토리얼. 웹 개발 초보자부터 전문가까지 모두를 위한 정보 제공.-->
+
+    <!-- 브라우저 탭에 표시될 문서의 제목을 설정한다. -->
+
+    <title>HTML 기본 구조</title>
+</head>
+
+<body>
+    <header>
+        <!-- Header 문서의 머리글 영역, 로고, 제목 ,네비게이션 등 포함 -->
+        <h1>HTML 구조</h1>
+        <nav>
+            <ul>
+                <li><a href="#section1">section1</a></li>
+                <li><a href="#section2">section2</a></li>
+                <li><a href="#section3">section3</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- 문서의 주요 콘텐츠 영역 -->
+    <main>
+        <!-- 관련 콘텐츠 그룹, 주제별로 나눈다. -->
+        <section id="section1">
+            <h2>section 1</h2>
+            <p>Html 기본</p>
+        </section>
+
+
+        <section id="section2">
+            <h2>section 2</h2>
+            <p>Html 기본</p>
+        </section>
+
+
+        <section id="section3">
+            <h2>section 3</h2>
+            <p>Html 기본</p>
+        </section>
+    </main>
+
+    <!-- 문서의 하단, 저작권, 연락처 정보등을 포함한다. -->
+    <footer>
+        <p>Copyright 2025</p>
+    </footer>
+</body>
+
+</html>
+
+<!-- 
+가장 많이 사용되는 패턴
+1. 웹사이트 레이아웃 : 목적 : 상단(헤더), 콘텐츠(메인), 하단(푸터)으로 나누어 구조적 웹페이지를 만든다.
+
+<body>
+    <header>...</header>
+    <main>
+        <section>...</section>
+    </main>
+    <footer>...</footer>
+</body>
+
+
+2. 카드 레이아웃 : 목적 : 제품, 블로그 포스터 , 뉴스 등을 정리하여 보기 좋게 표현.
+
+<div class="card">
+    <img src="image.jpg" alt="이미지 설명">
+    <h2>제목</h2>
+    <p>설명</p>
+    <a href="#">더 보기</a>
+</div>
+
+3. 네비게이션 바 : 웹사이트 탐색을 쉽게 함
+
+<nav>
+    <ul>
+        <li><a href="#home">홈</a></li>
+        <li><a href="#about">소개</a></li>
+        <li><a href="#contact">문의</a></li>
+    </ul>
+</nav>
+
+
+4. 폼 입력 : 사용자 데이터를 입력 받아서 서버에 전송
+
+<form action="/submit" method="POST">
+    <label for="name">이름:</label>
+    <input type="text" id="name" name="name">
+    <label for="email">이메일:</label>
+    <input type="email" id="email" name="email">
+    <button type="submit">제출</button>
+</form>
+
+
+5. 반응형 이미지와 텍스트 : 디바이스 크기에 맞게 콘텐츠 크기 조정
+
+<div class="responsive">
+    <img src="image.jpg" alt="설명">
+    <p>이미지와 함께 반응형 텍스트.</p>
+</div>
+
+ -->

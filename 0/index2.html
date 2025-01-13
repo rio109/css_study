@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <!-- form : form 요소의 시작과 끝을 정의하고, action : 데이터를 전송할 url 지정, method 방식 지정 -->
+        <!-- type : text, password , email , number 등 다양한 입력 필드 유형 지정 가능 
+        value : 입력 필드의 초기값.
+        placeholder : 사용자에게 힌트 제공
+        required : 필수 입력 필드로 설정
+        -->
+        <form action="/submit" method="POST">
+            <label for="username">사용자 이름:</label>
+            <input type="text" id="username" name="username" required>
+            <button type="submit">제출</button>
+        </form>
+        <textarea name="message" rows="5" cols="30" placeholder="메시지를 입력하세요"></textarea>
+
+        <br>
+
+        <!-- 버튼: type : submit 폼 데이터를 제출 , reset : 폼의 입력 데이터 초기화, type="button" 버튼 클릭시 js 동작 정의 -->
+        <button type="submit">제출</button>
+
+        <br>
+
+        <!-- label : 입력 필드에 대한 설명 제공 , for 속성을 사용해 특정 입력 필드와 연결 가능 -->
+        <label for="username">사용자 이름:</label>
+        <input type="text" id="username" name="username">
+
+        <br>
+
+        <!-- select , option : 드롭 다운 메뉴 생성 
+            select multiple : 다중 선택 허용 , option : value 선택한 옵션의 값
+        -->
+        <label for="country">국가:</label>
+        <select id="country" name="country" multiple>
+            <option value="kr">대한민국</option>
+            <option value="us">미국</option>
+            <option value="jp">일본</option>
+        </select>
+
+        <br>
+
+        <!-- <fieldset>과 <legend>
+            폼의 관련 항목을 그룹화. -->
+        <fieldset>
+            <legend>사용자 정보</legend>
+            <label for="username">사용자 이름:</label>
+            <input type="text" id="username" name="username">
+        </fieldset>
+
+        <!-- 파일 업로드 필드. -->
+        <label for="profile">프로필 사진:</label>
+        <input type="file" id="profile" name="profile">
+
+
+        <!-- GET : 예시 결과 값 : /search?query=입력값  -->
+
+        <form action="/search" method="GET">
+            <input type="text" name="query" placeholder="검색어 입력">
+            <button type="submit">검색</button>
+        </form>
+
+        <!--  POST : http 본문에 포함 -->
+
+        <form action="/submit" method="POST">
+            <input type="text" name="username" placeholder="사용자 이름">
+            <button type="submit">제출</button>
+        </form>
+
+
+    </main>
+    <footer></footer>
+</body>
+
+</html>
