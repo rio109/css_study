@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- SEO TAG -->
+    <meta name="description" content="웹 개발 튜토리얼">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+
+    <!-- 소셜 미디어 공유 -->
+
+    <!-- Open Graph Protocol은 웹사이트가 소셜 미디어 플랫폼 등에서 공유될때 콘텐츠를 어떻게 표시할지 정의 -->
+    <!-- 목적 : 링크를 공유할 때, 이미지, 제목, 설명등을 정확하게 지정할 수 있어 더 매력적인 콘텐츠를 만들 수 있다. -->
+    <!-- 검색 엔진과 소셜 미디어의 이해도 . 검색 엔진에 명확하게 전달 -->
+    <meta property="og:title" content="페이지 제목">
+    <meta property="og:description" content="페이지 설명">
+    <meta property="og:image" content="image.jpg">
+    <meta property="og:url" content="https://www.example.com">
+    <meta property="og:type" content="website">
+    <!-- type : website or article -->
+
+    <!-- 콘텐츠의 언어도 지정 가능 -->
+    <meta property="og:locale" content="ko_KR">
+    <!-- 사이트 이름 지정 가능 -->
+    <meta property="og:site_name" content="Example Site">
+    <!-- 공유 콘텐츠에 비디오를 포함한다. -->
+    <meta property="og:video" content="https://www.example.com/video.mp4">
+
+
+
+    <meta charset="UTF-8">
+    <!--  뷰포인트 설정  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 
+        <head>페이지나 섹션의 머리글 부분
+        <nav>네비게이션 링크 그룹</nav>
+    </head>
+    <main>
+        문서의 중요 콘텐츠
+        <section>논리적으로 관련된 콘텐츠 그룹</section>
+        <article>독립적으로 배포가 가능한 콘텐츠 : 블로그 글, 기사</article>
+        <aside>메인 콘텐츠와 연관된 보조 콘텐츠</aside>
+    </main>
+    <footer>문서나 섹션의 바닥글</footer>
+ -->
+    <header>
+        <h1>웹사이트 제목</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">홈</a></li>
+                <li><a href="#about">소개</a></li>
+                <li><a href="#contact">문의</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>섹션 1</h2>
+            <p>이곳은 섹션 1의 내용입니다.</p>
+        </section>
+        <article>
+            <h2>블로그 게시글</h2>
+            <p>이곳은 독립적인 콘텐츠입니다.</p>
+        </article>
+
+        <!-- 캔버스 : 2d 그래픽을 그리는데 사용된다. -->
+        <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000;"></canvas>
+
+        <!-- 
+            웹 콘텐츠를 모든 사용자가 이용할 수 있도록 접근성을 고려해야 한다.
+            접근성을 위한 주요 요소
+            alt 속성 : 이미지의 대체 텍스트
+            ARIA(Accessible Rich Internet Applications) 속석 : 인터랙티브 콘텐츠의 접근성을 향상
+        -->
+        <img src="image.jpg" alt="풍경 이미지">
+        <input type="text" id="name" name="name">
+        <label for="name">이름:</label>
+
+
+        <!-- autocomplete 설정 -->
+        <input type="text" name="name" autocomplete="on" placeholder="이름 입력">
+
+    </main>
+
+    <footer>
+        <p>Copyright © 2025</p>
+    </footer>
+
+</body>
+<script>
+    const canvas = document.getElementById('myCanvas');
+    const ctx = canvas.getContext('2d');
+    ctx.fillStyle = 'blue';
+    ctx.fillRect(50, 25, 100, 50);
+</script>
+
+</html>
