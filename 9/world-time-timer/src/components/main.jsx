@@ -3,12 +3,10 @@ import Clock from "./clock"
 import { timezones } from "../data/timezone";
 
 const Main = () => {
-
-    console.log(timezones)
     return (
         <>
             <main>
-                <Clock></Clock>
+                <Clock city={"seoul"} offset={9}></Clock>
             </main>
         </>
     )
